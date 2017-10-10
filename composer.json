@@ -1,0 +1,37 @@
+{
+    "name": "lanko/laraveloctober",
+    "description": "",
+    "keywords": [
+        "framework",
+        "laravel",
+        "octobercms"
+    ],
+    "license": "MIT",
+    "authors": [{
+        "name": "Andrey Lanko",
+        "email": "lanko@perevorot.com"
+    }],
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "artesaos/seotools": "^0.10.0",
+        "mcamara/laravel-localization": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Perevorot\\LaravelOctober\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Perevorot\\LaravelOctober\\Providers\\AppServiceProvider",
+                "Perevorot\\LaravelOctober\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "Localization": "Mcamara\\LaravelLocalization\\Facades\\LaravelLocalization",
+                "SEO": "Perevorot\\LaravelOctober\\Facades\\SEO"
+            }
+        }
+    },
+}
